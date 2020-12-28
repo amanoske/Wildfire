@@ -108,7 +108,7 @@ namespace Wildfire
         public int Incinerate()
         {
             int files_destroyed = 0;
-            for(int i = 0; i < file_paths.Count; i++)
+            for (int i = 0; i < file_paths.Count; i++)
             {
                 try
                 {
@@ -116,9 +116,21 @@ namespace Wildfire
                     Console.Out.WriteLine("Destroyed file: " + file_paths[i]);
                     files_destroyed++;
                 }
-                catch(Exception e)
+                //in the event the user has given a relative path vs an absolute path. 
+                catch (FileNotFoundException e)
                 {
-                    Console.Out.WriteLine("Failed to destroy file: " + file_paths[i]);
+                    try
+                    {
+                        CryptoshredFile(Directory.GetCurrentDirectory() + "\\" + file_paths[i]); //attempt to delete the file based on relative path
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.Out.WriteLine("Failed to destroy file: " + file_paths[i] + " - file not found or accessible");
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.Out.WriteLine("Failed to destroy file: " + file_paths[i] + "Error: ");
                 }
             }
             return files_destroyed;
