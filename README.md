@@ -1,5 +1,5 @@
 # Wildfire
-![Wildfire Screenshot](https://github.com/amanoske/Wildfire/blob/screenshot.png)
+![Wildfire Screenshot](screenshot.png)
 
 ### "Once it takes fire, the substance will burn fiercely until it is no more. More, it will seep into cloth, wood, leather, even steel, so they take fire as well."
 **- George RR Martin, A Feast for Crows***
