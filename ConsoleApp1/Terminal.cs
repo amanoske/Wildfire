@@ -29,7 +29,8 @@ namespace Wildfire
             }
             else
                 files = args;
-
+            Console.Out.WriteLine("--------");
+            Console.Out.WriteLine("Commencing destruction...");
             Incinerator incinerator = new Incinerator(files);
             int files_deleted = incinerator.Incinerate();
             Console.Out.WriteLine("Files Destroyed: " + files_deleted);
