@@ -1,7 +1,7 @@
 # Wildfire
 ![Wildfire Screenshot](screenshot.png)
 
-### "Once it takes fire, the substance will burn fiercely until it is no more. More, it will seep into cloth, wood, leather, even steel, so they take fire as well."
+### "Once it takes fire, the substance will burn fiercely until it is no more."
 **- George RR Martin, A Feast for Crows***
 
 Wildfire is a secure deletion tool in C#. Using [SP800-88](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r1.pdf) conformant methods, Wildfire destroys accessible files locally or over a network to resist an adversary's attempts to recover data.
