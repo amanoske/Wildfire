@@ -8,18 +8,18 @@ using System.Collections.Generic;
 
 namespace Wildfire
 {
-    public class Incinerator
+    public class Cryptoshredder
     {
-        public Incinerator()
+        public Cryptoshredder()
         {
             file_paths = new List<string>();
         }
-        public Incinerator (string file)
+        public Cryptoshredder (string file)
         {
             file_paths = new List<string>();
             file_paths.Add(file);
         }
-        public Incinerator(string[] file_paths_input)
+        public Cryptoshredder(string[] file_paths_input)
         {
             file_paths = new List<string>();
             file_paths.AddRange(file_paths_input);
@@ -105,7 +105,7 @@ namespace Wildfire
             File.Delete(path);
         }
 
-        public int Incinerate()
+        public int Cryptoshred()
         {
             int files_destroyed = 0;
             for (int i = 0; i < file_paths.Count; i++)
