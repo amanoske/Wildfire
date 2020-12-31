@@ -1,5 +1,5 @@
 # Wildfire
-![Wildfire Screenshot](screenshot.png)
+![Wildfire Screenshot](wildfire.gif)
 
 ### "Once it takes fire, the substance will burn fiercely until it is no more."
 **- George RR Martin, A Feast for Crows***
