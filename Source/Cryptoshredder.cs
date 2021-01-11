@@ -85,8 +85,8 @@ namespace Wildfire
             rand.GetBytes(tag);
 
            cipher.Encrypt(nonce, plaintext, ciphertext, tag);
-
-            return ciphertext;
+           System.GC.Collect();
+           return ciphertext;
         }
 
         private void CryptoshredFile(string path)
