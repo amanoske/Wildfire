@@ -41,8 +41,8 @@ namespace Wildfire
         private string EncryptString(string plain, AesGcm cipher)
         {
             //convert plaintext to bytes
-            byte[] plaintext = Encoding.UTF8.GetBytes(plain);
-            byte[] ciphertext = new byte[plaintext.Length];
+            volatile byte[] plaintext = Encoding.UTF8.GetBytes(plain);
+            volatile byte[] ciphertext = new byte[plaintext.Length];
             int cipherLengthSize = plaintext.Length;
 
             //setup RNG and return value
@@ -60,6 +60,7 @@ namespace Wildfire
             rand.GetBytes(tag);
 
             cipher.Encrypt(nonce, plaintext, ciphertext, tag);
+            System.GC.Collect();
 
             return Convert.ToBase64String(ciphertext);
         }
